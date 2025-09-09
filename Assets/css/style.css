@@ -1,0 +1,754 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f2f2f2;
+    color: #2F2F2F;
+}
+
+header{
+    width: 100%;
+}
+
+header .navigation{
+    background-color: #222121d2;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border: 1px solid white;
+    border-top: none;
+} 
+
+header h2{
+    padding: 10px;
+    margin-left: 5%;
+    color: red;
+    font-weight: 900;
+    font-size: 40px;    
+}
+
+header nav{
+    padding: 10px;
+    width: 60%;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 4px;
+}
+
+header nav select{
+    display: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+header nav ul li a button{
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .5s;
+    filter: blur(1.5px);
+    cursor: pointer;
+}
+
+header nav ul li a:hover button {
+    transform: scale(1.1) rotate(2deg);
+    border: 3px solid red;
+    filter: blur(0px);
+    animation: Move 1.5s infinite linear;
+    transition: .3s ease-in-out;
+    box-shadow: 0 0 20px red;
+}
+
+@keyframes Move {
+    0% {
+        border-color: red;
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 10px red;
+    }
+    25% {
+        border-color: yellow;
+        transform: scale(1.1) rotate(3deg);
+        box-shadow: 0 0 20px yellow;
+    }
+    50% {
+        border-color: limegreen;
+        transform: scale(1.15) rotate(-3deg);
+        box-shadow: 0 0 25px limegreen;
+    }
+    75% {
+        border-color: cyan;
+        transform: scale(1.1) rotate(2deg);
+        box-shadow: 0 0 20px cyan;
+    }
+    100% {
+        border-color: magenta;
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 10px magenta;
+    }
+}
+
+@media all and (min-width:1070px) {
+    header .navigation h2{
+        font-size: 30px;  
+    }
+}
+
+@media all and (max-width:1070px) {
+
+    header .navigation{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .navigation h2{
+        padding: 10px;
+        font-weight: 900;
+        font-size: 16px;  
+        width: fit-content; 
+    }
+
+    header .navigation nav {
+        display: flex;
+        justify-content: flex-end; 
+        flex: 1; 
+        margin-right: 5%;
+    }
+
+    header .navigation nav ul{
+        display: none;
+    }
+
+    header .navigation nav select{
+        display: block;
+        margin-left: auto;
+        appearance: none;      
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        background-color: transparent;
+        padding: 5px 10px;
+        border: black 3px solid;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 2px white;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    header .navigation nav select option {
+        color: black;
+        background-color: white;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: cursive;
+    }
+
+    header .navigation nav select .active{
+        background-color: red;
+        color: black;
+        font-size: 17px;
+        transition: 1s;
+        width: fit-content;
+    }
+
+    .Home .caption .intro{
+        display: flex;
+        flex-wrap: wrap;
+    }   
+}
+
+
+.Home{
+    height: 100vh;
+    background: url(../img/background.png) no-repeat center center;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+.Home .overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.Home .caption{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.Home .intro{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home .caption .intro h1{
+    color: red;
+    font-size: 60px;
+}
+
+.Home .caption .intro p{
+    color: white;
+    font-size: 50px;
+}
+
+.Home .caption .intro a button{
+    padding: 10px 40PX;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: black;
+    opacity: 0.6;
+    border: 3px solid white;
+}
+
+.Home .caption .intro a button:hover{
+    transform: scale(1.1);
+    background-color: transparent;    
+    opacity: 1;
+    border: 3px solid red;
+    box-shadow: 0px 0px 15px white;
+}
+
+.menus_1_title{
+    font-family: Arial;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: red;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.select{
+    min-width: 353px;
+    max-width: 100%;
+    color: #ed1c24;
+    line-height: 1.2em;
+    height: 34px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    border: 0 none;
+    box-shadow: 1px 1px 12px 4px black;
+    cursor: pointer;
+    text-indent: 0.01px;
+    font-family: Arial;
+    appearance: none;
+    padding-left: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.select option{
+    font-family: Arial;
+    color: #ed1c24;
+}
+
+.nav2-menu{
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.orange{
+    font-family: Arial;
+    font-size: 19px;
+    color: #FFF;
+    background-image: url(https://www.swissrestaurants.com.eg/images/orange.jpg);
+    background-repeat: no-repeat;
+    float: right;
+    padding: 4px 7px;
+    margin-right: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.Menu{
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 50px;
+    
+}
+
+.Menu .list-menu{
+    width:80%; 
+    height: auto;
+    margin:auto; 
+    border-radius: 10px;
+    min-height: 250px; 
+    overflow:auto; 
+    overflow-x:hidden;   
+    padding-left:10px;
+    position: relative;
+    z-index: 1;
+    border: 3px solid black;
+    border-right: none;
+    background: white;
+    margin-bottom: 100px;
+}
+
+.Menu .inner{
+    width:100%; 
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.1;
+    position: absolute;
+    z-index: 2;
+}
+
+.Menu .list-menu-parent{
+    padding: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.Menu .list-menu .main_prices_titles{
+    font-family: Arial;
+    width: 100%;
+    float: left;
+    font-size: 28px;
+    color: #b11111;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.Menu .list-menu .main_prices_text{
+    font-family: Arial;
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.Menu .list-menu .main_prices_textsmaller{
+    font-family: Arial;
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.Menu .list-menu .main_prices_text .prices{
+    font-family: Arial;
+    font-size: 24px;
+    color: #000;
+    width: 250px;
+    float: right;
+    text-align: right;
+}
+
+.Menu .list-menu .main_prices_text .prices span{
+    color: red;
+    text-decoration: line-through;
+}
+
+@media all and (max-width:1070px) {
+   .menus_1_title{
+        font-size: 62px;
+    }
+
+    .select{
+        min-width: 100px;
+        margin-left: 10px;
+    }
+
+    .orange{
+        width: 130px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .nav2-menu{
+        width:350px;
+    }
+
+    .Menu .list-menu{
+        width:340px; 
+    }
+
+    .Menu .list-menu .main_prices_titles{
+        padding-top: 35px;
+        padding-bottom: 10px;
+    }
+
+    .Menu .list-menu .main_prices_text{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .Menu .list-menu .main_prices_textsmaller{
+        width: 90%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 12px;
+    }
+}
+
+.Offers {
+    width: 100%;        
+    min-height: 100vh;  
+    padding: 50px 20px; 
+    box-sizing: border-box;
+}
+.Offers h2{ 
+    font-family: Arial;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    color: red;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.box1{
+    display: flex;
+    flex-wrap: wrap;           
+    justify-content: center;  
+    align-items: flex-start; 
+    align-items: center;      
+    gap: 20px;                 
+    padding: 20px;
+}
+
+.box1 .content{
+    flex: 1 1 250px;
+    max-width: 300px;
+    border: 1px solid #00000075;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 2px black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 10px;
+    
+}
+
+.box1 .content .img{
+    width: 100%;
+}
+
+.box1 .content .img img{
+    width: 100%;
+} 
+
+.box1 .content .caption{
+    margin-top: 20px;
+}
+
+.box1 .content .caption p span{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.box1 .content .caption p{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 500;  
+}
+
+.box1 .content .interaction{
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box1 .content .interaction p{
+
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 900;
+
+}
+
+.box1 .content .interaction a button{
+    padding: 5px 15px;
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.box1 .content .interaction a button i {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .Offers h2 {
+        font-size: 40px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .box1 .content {
+        flex: 1 1 100%;  
+        max-width: 100%;
+    }
+}
+
+.Contact {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  margin-bottom: 150px;
+}
+
+.part1, .part2 {
+  width: 45%;
+  min-width: 300px;
+}
+
+.info h2 {
+  font-size: 36px;
+  color: red;
+  margin-bottom: 15px;
+}
+
+.info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.social-media-icon {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-media-icon a {
+  font-size: 30px;
+  color: #222;
+  transition: 0.3s;
+}
+
+.social-media-icon a:hover {
+  color: red;
+}
+
+.message p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: red;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+.btn-submit-contact {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-submit-contact button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-send {
+  background-color: red;
+  color: white;
+}
+
+.btn-send:hover {
+  background-color: darkred;
+}
+
+.btn-delete {
+  background-color: #444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .part1, .part2 {
+    width: 100%;
+  }
+
+  .social-media-icon {
+    justify-content: center;
+  }
+}
+
+
+/* ========= Footer ========= */
+footer {
+  background-color: #222;
+  padding: 40px 20px 20px;
+  margin-top: -50px;
+  color: white; /* تأكيد اللون */
+}
+
+footer {
+  color: white !important;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-container h3,
+.footer-container h4 {
+  color: red !important;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1 1 250px;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle ul li {
+  margin: 8px 0;
+}
+
+.footer-middle ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-middle ul li a:hover {
+  color: red;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: red;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}

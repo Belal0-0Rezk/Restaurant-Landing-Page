@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Food | Home</title>
+
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <h2>Delicious Food</h2>
+            <nav>
+                <ul>
+                    <li> <a href="#Home">Home</a> </li>
+                    <li> <a href="#Menu">Menu</a> </li>
+                    <li> <a href="#Offers">Offers</a> </li>
+                    <li> <a href="#Contact">Contact</a> </li>
+                    <li> <a href="#Contact"> <button>Order Now</button> </a> </li>
+                </ul>
+                <select>
+                    <option hidden>Sections</option>
+                    <option>Home</option>
+                    <option>Menu</option>
+                    <option>Offers</option>
+                    <option>Contact</option>
+                </select>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="Home" id="Home">
+            <div class="overlay"></div>
+            <div class="caption">
+                <div class="intro">
+                    <h1>Delicious Food</h1>
+                    <p>Egyptian Food in USA</p>
+                    <a href="#Menu"> <button>More</button> </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="Menu" id="Menu">
+            <div class="menus_1_title"> Delicious Food MENU </div>
+
+            <div class="nav2-menu">
+                <select id="menuFilter" class="select" >
+                    <option value="all">All card menu ...</option>
+                    <option value="soup">Soup</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="seafood">Sea - Food</option>
+                    <option value="pasta">Pasta</option>
+                </select>
+                <a href="#Contact"> <div class="orange">Make Reservation</div> </a>
+            </div>
+            
+            <div  class="list-menu" id="list-menu">
+                <div class="inner"></div>
+                <div class="list-menu-parent">
+
+                    <!-- Soup -->
+                    <div class="category soup">
+                        <div class="main_prices_titles">Soup</div>
+                        <div class="main_prices_text">
+                            Chicken Creamy Soup
+                            <div class="prices"><span>90.00</span> EGP</div>
+                        </div>
+                        <div class="main_prices_text">
+                            Tomato Creamy Soup
+                            <div class="prices"><span>75.00</span> EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            Please ask your waiter for soup today.
+                        </div>
+                    </div>
+
+                    <!-- Chicken -->
+                    <div class="category chicken">
+                        <div class="main_prices_titles">Chicken</div>
+                        <div class="main_prices_text">
+                            Grilled chicken breast
+                            <div class="prices">469.00 EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            Grilled chicken in creamy mushroom sauce served with rice and vegetables.
+                        </div>
+                        <div class="main_prices_text">
+                            Chicken stroganoff
+                            <div class="prices">490.00 EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            Chicken strips with brown sauce served with rice and vegetables.
+                        </div>
+                    </div>
+
+                    <!-- Sea Food -->
+                    <div class="category seafood">
+                        <div class="main_prices_titles">Sea - Food</div>
+                        <div class="main_prices_text">
+                            Fish Fillet
+                            <div class="prices">685.00 EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            Grilled or fried fish fillet with lemon sauce served with rice and vegetables.
+                        </div>
+                        <div class="main_prices_text">
+                            Mixed Seafood
+                            <div class="prices">765.00 EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            Fish, shrimps and calamari with French fries and vegetables.
+                        </div>
+                    </div>
+
+                    <!-- Pasta -->
+                    <div class="category pasta">
+                        <div class="main_prices_titles">Pasta</div>
+                        <div class="main_prices_text">
+                            Fettuccine meat balls
+                            <div class="prices">315.00 EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            topped with meat balls in pepper sauce.
+                        </div>
+                        <div class="main_prices_text">
+                            Lasagne al Forno
+                            <div class="prices"><span>239.00</span> EGP</div>
+                        </div>
+                        <div class="main_prices_textsmaller">
+                            gratinate.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section id="Offers" class="Offers">
+            <h2>Offers</h2>
+            <div class="box1">
+                <div class="content">
+                    <div class="img">
+                        <img src="Assets/img/card1/download-removebg-preview.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <p> <span>Tomato Creamy Soup</span> </p>
+                        <p>Please ask your waiter for soup today.</p>
+                    </div>
+                    <div class="interaction">
+                        <p>75.00 EGP</p>
+
+                        <a href="#Contact"> 
+                            <button class="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="img">
+                        <img src="Assets/img/card2/download-removebg-preview.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <p> <span>Chicken Creamy Soup</span> </p>
+                        <p>Please ask your waiter for soup today.</p>
+                    </div>
+                    <div class="interaction">
+                        <p>90.00 EGP</p>
+
+                        <a href="#Contact"> 
+                            <button class="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="img">
+                        <img src="Assets/img/card3/download-removebg-preview.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <p> <span>Lasagne al Forno</span> </p>
+                        <p>Please ask your waiter for soup today.</p>
+                    </div>
+                    <div class="interaction">
+                        <p>239.00 EGP</p>
+
+                        <a href="#Contact"> 
+                            <button class="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="img">
+                        <img src="Assets/img/card4/images-removebg-preview-removebg-preview.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <p> <span>Fish Fillet</span> </p>
+                        <p>Grilled fish fillet with lemon sauce, served with rice and vegetables.</p>
+                    </div>
+                    <div class="interaction">
+                        <p>685.00 EGP</p>
+
+                        <a href="#Contact"> 
+                            <button class="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="img">
+                        <img src="Assets/img/card5/download-removebg-preview.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <p> <span>Grilled chicken breast</span> </p>
+                        <p>Grilled chicken in sauce served with rice and vegetables.</p>
+                    </div>
+                    <div class="interaction">
+                        <p>469.00 EGP</p>
+
+                        <a href="#Contact"> 
+                            <button class="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section id="Contact">
+            <div class="Contact">
+                <!-- Left Side -->
+                <div class="part1">
+                    <div class="info">
+                        <h2>Contact Us</h2>
+                        <p>
+                        📍 Our mailing address is :<br>
+                        123 Nile Street, Downtown, Cairo, Egypt<br>
+                        📞 Phone : +20 100 123 4567
+                        </p>
+                    </div>
+
+                    <div class="social-media-icon">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="part2">
+                    <div class="message">
+                        <p>A great vision without great people is worthless.<br>Let's demand it now.</p>
+                    </div>
+
+                    <div class="form">
+                        <form action="" method="post">
+                        <input type="text" placeholder="Enter your Name" required>
+                        <input type="email" placeholder="Enter a valid email address" required>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+
+                        <div class="btn-submit-contact">
+                            <button type="submit" class="btn-send">Submit</button>
+                            <button type="reset" class="btn-delete">Delete</button>
+                        </div>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+            <h3>Delicious Food</h3>
+            <p>123 Nile Street, Downtown, Cairo, Egypt</p>
+            <p>📞 +20 100 123 4567</p>
+            </div>
+
+            <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Offers">Offers</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-right">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/201234567890"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Delicious Food. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+    const select = document.getElementById("menuFilter");
+    const categories = document.querySelectorAll(".category");
+
+    select.addEventListener("change", function() {
+        let value = this.value;
+
+        categories.forEach(cat => {
+            if (value === "all") {
+                cat.style.display = "block";
+            } else {
+                if (cat.classList.contains(value)) {
+                    cat.style.display = "block";
+                } else {
+                    cat.style.display = "none";
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</html>
